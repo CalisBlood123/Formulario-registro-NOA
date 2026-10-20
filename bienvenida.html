@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tu cuenta de Aura está lista.">
+    <title>Bienvenida</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="pagina pagina--bienvenida">
+    <div class="fondo-ambiente" aria-hidden="true">
+        <span class="resplandor resplandor--superior-izquierdo"></span>
+        <span class="resplandor resplandor--central-derecho"></span>
+        <span class="resplandor resplandor--inferior"></span>
+    </div>
+
+    <header class="encabezado">
+        <nav class="barra-superior" aria-label="Navegación principal">
+            <a class="marca" href="index.html" aria-label="Aura, inicio">
+                <span class="marca__icono material-symbols-outlined" aria-hidden="true">auto_awesome</span>
+            </a>
+            <span class="estado-pagina">
+                <span class="estado-pagina__punto" aria-hidden="true"></span>
+                <span>Bienvenida</span>
+            </span>
+            <span class="avatar" aria-hidden="true">
+                <span class="material-symbols-outlined">person</span>
+            </span>
+        </nav>
+    </header>
+
+    <main class="contenido-principal contenido-principal--bienvenida">
+        <section class="seccion-bienvenida" aria-labelledby="titulo-bienvenida">
+            <div class="particulas-ambiente" aria-hidden="true">
+                <span class="particula particula--uno"></span>
+                <span class="particula particula--dos"></span>
+                <span class="particula particula--tres"></span>
+                <span class="particula particula--cuatro"></span>
+                <span class="particula particula--cinco"></span>
+                <span class="particula particula--seis"></span>
+                <span class="particula particula--siete"></span>
+            </div>
+
+            <article class="tarjeta-bienvenida">
+                <span class="resplandor resplandor--bienvenida-superior" aria-hidden="true"></span>
+                <span class="resplandor resplandor--bienvenida-inferior" aria-hidden="true"></span>
+
+                <header class="cabecera-bienvenida">
+                    <span class="insignia-bienvenida">
+                        <span class="material-symbols-outlined icono-celebracion" aria-hidden="true">celebration</span>
+                        <span>¡Cuenta creada con éxito! 🎉</span>
+                    </span>
+                    <h1 class="titulo-bienvenida" id="titulo-bienvenida">
+                        ¡Te damos la bienvenida al futuro creativo!
+                    </h1>
+                    <p class="texto-bienvenida">
+                        Tu espacio de trabajo está completamente configurado y verificado. Es hora de materializar tus ideas con la máxima potencia estética y colaborativa.
+                    </p>
+                </header>
+
+                <div class="acciones-bienvenida">
+                    <button class="boton-principal boton-principal--bienvenida" type="button" onclick="logout()">
+                        <span>Cerrar sesión</span>
+                        <span class="material-symbols-outlined" aria-hidden="true">logout</span>
+                    </button>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="pie-pagina__contenido">
+            <span class="pie-pagina__marca">
+                <span class="pie-pagina__punto" aria-hidden="true"></span>
+                <span>Aura Onboarding Flow</span>
+            </span>
+            <nav class="enlaces-pie" aria-label="Enlaces legales">
+                <a href="#">Privacidad</a>
+                <a href="#">Términos</a>
+                <a href="#">Soporte</a>
+            </nav>
+            <span class="copyright">© 2025 Aura Inc.</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

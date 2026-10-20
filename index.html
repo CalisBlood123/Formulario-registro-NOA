@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crea tu cuenta de Aura para comenzar.">
+    <title>Crear cuenta | REGISTRO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="pagina pagina--registro">
+    <div class="fondo-ambiente">
+        <span class="resplandor resplandor--superior-izquierdo"></span>
+        <span class="resplandor resplandor--central-derecho"></span>
+        <span class="resplandor resplandor--inferior"></span>
+    </div>
+
+    <header class="encabezado">
+        <nav class="barra-superior">
+            <a class="marca" href="index.html">
+                <span class="marca__icono material-symbols-outlined">auto_awesome</span>
+            </a>
+            <span class="estado-pagina">
+                <span class="estado-pagina__punto"></span>
+                <span>Registro</span>
+            </span>
+            <span class="avatar">
+                <span class="material-symbols-outlined">person</span>
+            </span>
+        </nav>
+    </header>
+
+    <main class="contenido-principal contenido-principal--registro">
+        <section class="seccion-registro">
+            <div class="envoltorio-formulario">
+                <span class="resplandor resplandor--tarjeta-superior"></span>
+                <span class="resplandor resplandor--tarjeta-inferior"></span>
+                <span class="resplandor resplandor--tarjeta-central"></span>
+
+                <section class="tarjeta-registro">
+                    <div class="contenido-formulario">
+                        <header class="introduccion-formulario">
+                            <span class="etiqueta-seccion">Crear Cuenta</span>
+                            <h1 class="titulo-formulario">Crea tu cuenta</h1>
+                            <p class="texto-introduccion">Ingresa tus datos personales para comenzar.</p>
+                        </header>
+
+                        <form class="formulario" onsubmit="registrar(event)">
+                            <div class="grupo-campo">
+                                <label class="etiqueta-campo etiqueta-campo--con-detalle" for="nombre">
+                                    <span>Nombre Completo</span>
+                                    <span class="detalle-etiqueta">Requerido</span>
+                                </label>
+                                <p class="ayuda-campo">Ingresa tu nombre y apellido tal como figuran en tu documento.</p>
+                                <input class="entrada" id="nombre" placeholder="Tu nombre..." type="text" required>
+                            </div>
+
+                            <div class="grupo-campo">
+                                <span class="etiqueta-campo etiqueta-campo--con-detalle">
+                                    <span>Edad</span>
+                                    <span class="detalle-etiqueta">Requerido</span>
+                                </span>
+                                <p class="ayuda-campo">Ingresa tu edad en años cumplidos (solo números).</p>
+                                <input class="entrada" type="number" id="edad" placeholder="Ingresa tu edad" required>
+                            </div>
+
+                            <div class="grupo-campo">
+                                <label class="etiqueta-campo etiqueta-campo--con-detalle" for="emailPersonal">
+                                    <span>Correo Electrónico</span>
+                                    <span class="detalle-etiqueta">Trabajo o personal</span>
+                                </label>
+                                <p class="ayuda-campo">Utilizaremos este correo para enviarte la confirmación de tu cuenta.</p>
+                                <input class="entrada" id="emailPersonal" name="email" placeholder="ej. val@aura.design" type="email" required>
+                            </div>
+
+                            <div class="campos-contrasena">
+                                <div class="grupo-campo">
+                                    <span class="etiqueta-campo">Contraseña</span>
+                                    <p class="ayuda-campo">Usa letras, números y al menos una mayúscula.</p>
+                                    <input class="entrada" id="password" placeholder="Escribe tu contraseña" required type="password">
+                                </div>
+
+                                <div class="grupo-campo">
+                                    <label class="etiqueta-campo" for="confirmPassword">Confirmar Contraseña</label>
+                                    <p class="ayuda-campo">Vuelve a escribir exactamente tu clave.</p>
+                                    <input class="entrada" id="confirmPassword" placeholder="Repite la contraseña" type="password" required>
+                                </div>
+                            </div>
+
+                            <div class="acciones-formulario">
+                                <button class="boton-principal boton-principal--registro">
+                                    <span>Crear mi cuenta gratis</span>
+                                    <span class="material-symbols-outlined">arrow_forward</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="pie-pagina__contenido">
+            <span class="pie-pagina__marca">
+                <span class="pie-pagina__punto"></span>
+                <span>Aura Onboarding Flow</span>
+            </span>
+            <span class="copyright">© 2025 Aura Inc.</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
