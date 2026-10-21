@@ -10,38 +10,61 @@ const registrar = async (event) => {
 
     event.preventDefault();
 
-    const nombreValor = nombrePersonal.value.trim();
-    const edadValor = Number(edad.value);
-    const emailValor = email.value.trim();
-    const contraseñaValor = contraseña.value;
-    const confirmarValor = confirmar.value;
+    const nombreValor = nombrePersonal.value;
+    console.log(nombreValor);
 
-    if (!nombreValor || !emailValor || !contraseñaValor || !confirmarValor || !edad.value.trim()) {
-        alert("Completá todos los campos antes de registrarte.");
+    const edadValor = edad.value;
+    console.log(edadValor);
+
+    const emailValor = email.value;
+    console.log(emailValor);
+
+    const contraseñaValor = contraseña.value;
+    console.log(contraseñaValor);
+
+    const confirmarValor = confirmar.value;
+    console.log(confirmarValor);
+
+
+    const url = "https://jsonplaceholder.typicode.com/users";
+    const response = await fetch(url);
+    const json = await response.json();
+    console.log(json);
+
+
+    const emailUsers = json.map(
+        function (user) {
+            return user.email
+        }
+    )
+
+    console.log(emailUsers)
+
+    const emailFilter = emailUsers.filter(
+        function (emailDB) {
+            return emailDB === email
+        }
+    )
+
+    if (emailFilter.length > 0) {
+        alert.error("no te podes registrar");
+        return;
+    }
+
+    console.log(emailFilter)
+
+    if (contraseñaValor !== confirmarValor){
+        alert("las contraseñas son distintas");
+        console.log("las contraseñas son distintas");
         return;
     }
 
     if (edadValor < edadPermitida) {
-        console.error(edadValor, "años no es edad suficiente para registrarse");
-        alert("Debes tener al menos 18 años para registrarte.");
+        alert("Tienes que ser mayor de 18 años para poder registrarte")
+        console.error(edadValor, "años no es edad sufficiente para registrarse");
         return;
     }
 
-    if (contraseñaValor !== confirmarValor) {
-        alert("Las contraseñas son distintas.");
-        return;
-    }
-
-    const response = await fetch("https://jsonplaceholder.typicode.com/users");
-    const json = await response.json();
-
-    const emailUsers = json.map((users) => users.email);
-    const emailFilter = emailUsers.filter((emaiB) => emaiB === emailValor);
-
-    if (emailFilter.length > 0) {
-        alert("Ese correo ya está registrado.");
-        return;
-    }
 
     localStorage.setItem("emailUsuario", emailValor);
     localStorage.setItem("password", contraseñaValor);

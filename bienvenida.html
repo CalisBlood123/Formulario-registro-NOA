@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tu cuenta de Aura está lista.">
     <title>Bienvenida</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="pagina pagina--bienvenida">
@@ -21,14 +17,14 @@
     <header class="encabezado">
         <nav class="barra-superior" aria-label="Navegación principal">
             <a class="marca" href="index.html" aria-label="Aura, inicio">
-                <span class="marca__icono material-symbols-outlined" aria-hidden="true">auto_awesome</span>
+                <span class="marca__icono" aria-hidden="true">G</span>
             </a>
             <span class="estado-pagina">
                 <span class="estado-pagina__punto" aria-hidden="true"></span>
                 <span>Bienvenida</span>
             </span>
             <span class="avatar" aria-hidden="true">
-                <span class="material-symbols-outlined">person</span>
+                <span class="icono icono--persona" aria-hidden="true"></span>
             </span>
         </nav>
     </header>
@@ -51,7 +47,7 @@
 
                 <header class="cabecera-bienvenida">
                     <span class="insignia-bienvenida">
-                        <span class="material-symbols-outlined icono-celebracion" aria-hidden="true">celebration</span>
+                        <span class="icono icono--celebracion icono-celebracion" aria-hidden="true"></span>
                         <span>¡Cuenta creada con éxito! 🎉</span>
                     </span>
                     <h1 class="titulo-bienvenida" id="titulo-bienvenida">
@@ -65,7 +61,7 @@
                 <div class="acciones-bienvenida">
                     <button class="boton-principal boton-principal--bienvenida" type="button" onclick="logout()">
                         <span>Cerrar sesión</span>
-                        <span class="material-symbols-outlined" aria-hidden="true">logout</span>
+                        <span class="icono icono--salir" aria-hidden="true"></span>
                     </button>
                 </div>
             </article>

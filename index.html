@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Crea tu cuenta de Aura para comenzar.">
     <title>Crear cuenta | REGISTRO</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="pagina pagina--registro">
@@ -21,14 +17,14 @@
     <header class="encabezado">
         <nav class="barra-superior">
             <a class="marca" href="index.html">
-                <span class="marca__icono material-symbols-outlined">auto_awesome</span>
+                <span class="marca__icono icono" aria-hidden="true">G</span>
             </a>
             <span class="estado-pagina">
                 <span class="estado-pagina__punto"></span>
                 <span>Registro</span>
             </span>
             <span class="avatar">
-                <span class="material-symbols-outlined">person</span>
+                <span class="icono icono--persona" aria-hidden="true"></span>
             </span>
         </nav>
     </header>
@@ -40,13 +36,13 @@
                 <span class="resplandor resplandor--tarjeta-inferior"></span>
                 <span class="resplandor resplandor--tarjeta-central"></span>
 
-                <section class="tarjeta-registro">
+                <div class="tarjeta-registro">
                     <div class="contenido-formulario">
-                        <header class="introduccion-formulario">
+                        <div class="introduccion-formulario">
                             <span class="etiqueta-seccion">Crear Cuenta</span>
                             <h1 class="titulo-formulario">Crea tu cuenta</h1>
                             <p class="texto-introduccion">Ingresa tus datos personales para comenzar.</p>
-                        </header>
+                        </div>
 
                         <form class="formulario" onsubmit="registrar(event)">
                             <div class="grupo-campo">
@@ -93,12 +89,12 @@
                             <div class="acciones-formulario">
                                 <button class="boton-principal boton-principal--registro">
                                     <span>Crear mi cuenta gratis</span>
-                                    <span class="material-symbols-outlined">arrow_forward</span>
+                                    <span class="icono icono--flecha" aria-hidden="true"></span>
                                 </button>
                             </div>
                         </form>
                     </div>
-                </section>
+                </div>
             </div>
         </section>
     </main>

@@ -16,8 +16,8 @@
     --color-texto-secundario: #4b4451;
     --color-texto-contorno: #7c7482;
     --color-blanco: #ffffff;
-    --fuente-cuerpo: "Plus Jakarta Sans", sans-serif;
-    --fuente-titulos: "Syne", sans-serif;
+    --fuente-cuerpo: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --fuente-titulos: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     --espacio-xs: 0.375rem;
     --espacio-sm: 0.75rem;
     --espacio-md: 1.25rem;
@@ -70,6 +70,113 @@ input {
 
 button {
     cursor: pointer;
+}
+
+.icono {
+    position: relative;
+    display: inline-block;
+    flex: 0 0 auto;
+}
+
+.icono--brillo {
+    width: 1em;
+    height: 1em;
+}
+
+.icono--persona {
+    width: 1em;
+    height: 1em;
+}
+
+.icono--persona::before {
+    position: absolute;
+    top: 0.08em;
+    left: 0.35em;
+    width: 0.3em;
+    height: 0.3em;
+    border-radius: 50%;
+    background: currentColor;
+    content: "";
+}
+
+.icono--persona::after {
+    position: absolute;
+    bottom: 0.08em;
+    left: 0.18em;
+    width: 0.64em;
+    height: 0.34em;
+    border-radius: 0.45em 0.45em 0.12em 0.12em;
+    background: currentColor;
+    content: "";
+}
+
+.icono--flecha {
+    width: 1em;
+    height: 1em;
+}
+
+.icono--flecha::before {
+    position: absolute;
+    top: 0.18em;
+    left: 0.12em;
+    width: 0.76em;
+    height: 0.64em;
+    background: currentColor;
+    clip-path: polygon(0 40%, 58% 40%, 58% 0, 100% 50%, 58% 100%, 58% 60%, 0 60%);
+    content: "";
+}
+
+.icono--salir {
+    width: 1em;
+    height: 1em;
+}
+
+.icono--salir::before {
+    position: absolute;
+    top: 0.2em;
+    left: 0.08em;
+    width: 0.62em;
+    height: 0.6em;
+    background: currentColor;
+    clip-path: polygon(0 40%, 58% 40%, 58% 0, 100% 50%, 58% 100%, 58% 60%, 0 60%);
+    content: "";
+}
+
+.icono--salir::after {
+    position: absolute;
+    top: 0.08em;
+    right: 0.08em;
+    height: 0.84em;
+    border-right: 0.1em solid currentColor;
+    content: "";
+}
+
+.icono--celebracion {
+    width: 1em;
+    height: 1em;
+}
+
+.icono--celebracion::before {
+    position: absolute;
+    top: 0.08em;
+    left: 0.08em;
+    width: 0.68em;
+    height: 0.68em;
+    background: currentColor;
+    clip-path: polygon(50% 0, 61% 35%, 100% 50%, 61% 65%, 50% 100%, 39% 65%, 0 50%, 39% 35%);
+    content: "";
+}
+
+.icono--celebracion::after {
+    position: absolute;
+    top: 0.08em;
+    right: 0.02em;
+    width: 0.2em;
+    height: 0.2em;
+    border-radius: 50%;
+    background: currentColor;
+    box-shadow: -0.72em 0.62em 0 -0.04em currentColor;
+    content: "";
 }
 
 .pagina {
@@ -210,7 +317,7 @@ button {
     color: var(--color-blanco);
 }
 
-.avatar .material-symbols-outlined {
+.avatar .icono {
     font-size: 18px;
 }
 
@@ -477,7 +584,7 @@ button {
     transition: background-color 200ms ease, box-shadow 300ms ease, transform 300ms ease;
 }
 
-.boton-principal .material-symbols-outlined {
+.boton-principal .icono {
     font-size: 20px;
 }
 
@@ -498,7 +605,7 @@ button {
     transform: translateY(0);
 }
 
-.boton-principal--registro:hover .material-symbols-outlined {
+.boton-principal--registro:hover .icono {
     transform: translateX(0.25rem);
 }
 
@@ -719,7 +826,6 @@ button {
 .icono-celebracion {
     color: var(--color-contenedor-secundario);
     font-size: 18px;
-    font-variation-settings: "FILL" 1;
 }
 
 .titulo-bienvenida {
