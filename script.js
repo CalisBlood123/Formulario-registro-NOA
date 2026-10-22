@@ -42,26 +42,26 @@ const registrar = async (event) => {
 
     const emailFilter = emailUsers.filter(
         function (emailDB) {
-            return emailDB === email
+            return emailDB === emailValor
         }
     )
 
     if (emailFilter.length > 0) {
-        alert.error("no te podes registrar");
+        alert("No puedes registrarte ese mail esta en uso");
         return;
     }
 
     console.log(emailFilter)
 
     if (contraseñaValor !== confirmarValor){
-        alert("las contraseñas son distintas");
-        console.log("las contraseñas son distintas");
+        alert("Las contraseñas son distintas");
+        console.log("Las contraseñas son distintas");
         return;
     }
 
     if (edadValor < edadPermitida) {
         alert("Tienes que ser mayor de 18 años para poder registrarte")
-        console.error(edadValor, "años no es edad sufficiente para registrarse");
+        console.error(edadValor, "Años no es edad sufficiente para registrarse");
         return;
     }
 
